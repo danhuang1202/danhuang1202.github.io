@@ -29,7 +29,6 @@ gulp.task('scss', function(){
 	return gulp.src(`${APP_DIR}/scss/**/*.scss`)
 	.pipe($.compass({
 		sass: `${APP_DIR}/scss`,
-		css: `${DIST_DIR}/css/`,
 		style: 'compressed'
 	}))
 	.on('error', $.notify.onError(
