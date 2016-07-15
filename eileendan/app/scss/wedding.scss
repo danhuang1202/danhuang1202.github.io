@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif, Arial, 微軟正黑體, Helvetica;
+  font-family: 'cwTeXFangSong', serif;
+  font-size: 24px;
+}
+
+body {
+  height: 100%;
+}
+
+section {
+  &.full-screen {
+    height: 100%;
+  }
+}
+
+.cover {
+  position: relative;
+  background: url('../img/cover.jpg') no-repeat center center;
+  background-size: cover;
+  &-wreath {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+    background: url('../img/wreath.png') no-repeat center center;
+  }
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #fff5f0;
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    line-height: 1.6rem;
+    color: #a46628
+  }
+  .text {
+    margin-bottom: 40px;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #c2a289
+  }
+  .button {
+    padding: 15px 50px;
+    color: #fff;
+    background-color: #db524b;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'cwTeXFangSong', serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+}
+
+.information {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/information.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  .textbox {
+    color: #fff;
+    text-align: center;
+
+    .headline {
+      margin-bottom: 40px;
+      font-size: 2.4em;
+      font-weight: normal;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+
+    .text {
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    &-top-bg {
+      width: 122px;
+      height: 28px;
+      margin: 0 auto 30px auto;
+      background: url('../img/textbox-top.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    &-middle-bg {
+      width: 142px;
+      height: 8px;
+      margin: 30px auto 30px auto;
+      background: url('../img/textbox-middle.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    &-bottom-bg {
+      width: 73px;
+      height: 24px;
+      margin: 40px auto 0 auto;
+      background: url('../img/textbox-bottom.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .button {
+    padding: 4px 20px;
+    color: #fff;
+    background-color: transparent;;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'cwTeXFangSong', serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    margin-top: 10px;
+  }
+}
