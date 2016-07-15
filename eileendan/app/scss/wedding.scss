@@ -8,7 +8,7 @@ html {
   height: 100%;
   font-family: sans-serif, Arial, 微軟正黑體, Helvetica;
   font-family: 'cwTeXFangSong', serif;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 body {
@@ -46,14 +46,14 @@ section {
 
   .title {
     margin-bottom: 30px;
-    font-size: 1.2em;
-    line-height: 1.6rem;
+    font-size: 1.8em;
+    line-height: 2.4rem;
     color: #a46628
   }
   .text {
     margin-bottom: 40px;
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     color: #c2a289
   }
   .button {
@@ -62,7 +62,7 @@ section {
     background-color: #db524b;
     border: none;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'cwTeXFangSong', serif;
     letter-spacing: 2px;
     cursor: pointer;
@@ -95,18 +95,18 @@ section {
 
     .headline {
       margin-bottom: 40px;
-      font-size: 2.4em;
+      font-size: 3.3em;
       font-weight: normal;
     }
 
     .title {
       margin-bottom: 10px;
-      font-size: 1.8rem;
+      font-size: 2.7rem;
       font-weight: normal;
     }
 
     .text {
-      font-size: 1.4rem;
+      font-size: 2.1rem;
       font-weight: normal;
     }
 
@@ -141,7 +141,7 @@ section {
     background-color: transparent;;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'cwTeXFangSong', serif;
     letter-spacing: 2px;
     cursor: pointer;
