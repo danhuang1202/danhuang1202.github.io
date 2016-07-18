@@ -11,7 +11,13 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin mobile-portrait {
+@mixin tablet-landscape {
+  @media (max-device-width: #{$desktop-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile {
   @media (max-device-width: #{$mobile-width}) {
     @content;
   }
@@ -36,7 +42,7 @@ html {
 
 
 
-  @include mobile-portrait {
+  @include mobile {
     font-size: 8px;
   }
 }
@@ -53,7 +59,11 @@ section {
       height: 70%;
     }
 
-    @include mobile-portrait {
+    @include tablet-landscape {
+      height: 80%;
+    }
+
+    @include mobile {
       height: 60%;
     }
 
@@ -83,7 +93,7 @@ section {
       height: 250px;
     }
 
-    @include mobile-portrait {
+    @include mobile {
       top: 10px;
       right: 10px;
       width: 120px;
@@ -109,7 +119,7 @@ section {
     padding-bottom: 2.5em;
   }
 
-  @include mobile-portrait {
+  @include mobile {
     padding-top: 2em;
     padding-bottom: 2em;
   }
@@ -150,7 +160,7 @@ section {
         font-size: 3em;
       }
 
-      @include mobile-portrait {
+      @include mobile {
         margin-bottom: 0.5em;
         font-size: 3em;
       }
@@ -161,7 +171,7 @@ section {
       font-size: 2.7rem;
       font-weight: normal;
 
-      @include mobile-portrait {
+      @include mobile {
         margin-bottom: 0.3em;
         font-size: 2.4rem;
       }
@@ -179,7 +189,7 @@ section {
       background: url('../img/textbox-top.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile-portrait {
+      @include mobile {
         margin-bottom: 1em;
       }
     }
@@ -191,7 +201,7 @@ section {
       background: url('../img/textbox-middle.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile-portrait {
+      @include mobile {
         margin-top: 1em;
         margin-bottom: 1em;
       }
@@ -204,7 +214,7 @@ section {
       background: url('../img/textbox-bottom.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile-portrait {
+      @include mobile {
         margin-top: 2em;
       }
     }
