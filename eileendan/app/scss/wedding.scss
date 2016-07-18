@@ -25,7 +25,6 @@ $desktop-width: 1024px;
 html {
   height: 100%;
   font-family: sans-serif, Arial, 微軟正黑體, Helvetica;
-  //font-family: 'cwTeXFangSong', serif;
   font-size: 16px;
 
   @include tablet {
@@ -134,6 +133,7 @@ section {
 
       @include mobile {
         margin-bottom: 0.5em;
+        font-size: 3em;
       }
     }
 
@@ -144,12 +144,13 @@ section {
 
       @include mobile {
         margin-bottom: 0.3em;
+        font-size: 2.4rem;
       }
     }
 
     .text {
-      font-size: 2.1rem;
       font-weight: normal;
+      font-size: 2rem;
     }
 
     &-top-bg {
@@ -197,7 +198,6 @@ section {
     border: none;
     border-radius: 5px;
     font-size: 1.5em;
-    font-family: 'cwTeXFangSong', serif;
     letter-spacing: 2px;
     cursor: pointer;
     border: 2px solid #fff;
