@@ -108,8 +108,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3.75em;
-  padding-bottom: 3.75em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
   background-color: #{$background-color};
   font-size: 2em;
@@ -153,7 +153,7 @@ section {
     text-align: center;
 
     .headline {
-      margin-bottom: 2.5em;
+      margin-bottom: 1.2em;
       font-size: 2.8em;
       font-weight: normal;
 
