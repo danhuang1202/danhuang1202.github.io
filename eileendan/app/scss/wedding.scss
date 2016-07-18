@@ -49,6 +49,8 @@ html {
 
 body {
   height: 100%;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
