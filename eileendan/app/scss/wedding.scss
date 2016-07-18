@@ -1,7 +1,7 @@
 $text-color: #a46628;
 $background-color: #fff5f0;
 
-$tablet-width: 768px;
+$tablet-width: 736px;
 $desktop-width: 1024px;
 
 @mixin tablet {
@@ -10,8 +10,14 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin mobile {
-  @media (max-width: #{$tablet-width}) {
+@mixin mobile-portrait {
+  @media (max-width: #{$tablet-width}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (max-width: #{$tablet-width}) and (orientation: landscape) {
     @content;
   }
 }
@@ -27,11 +33,9 @@ html {
   font-family: sans-serif, Arial, 微軟正黑體, Helvetica;
   font-size: 16px;
 
-  @include tablet {
-    font-size: 20px;
-  }
 
-  @include mobile {
+
+  @include mobile-portrait {
     font-size: 8px;
   }
 }
@@ -45,11 +49,15 @@ section {
     height: 100%;
 
     @include tablet {
-      height: 50%;
+      height: 70%;
     }
 
-    @include mobile {
+    @include mobile-portrait {
       height: 60%;
+    }
+
+    @include mobile-landscape {
+      height: 150%;
     }
   }
 }
@@ -70,11 +78,11 @@ section {
     @include tablet {
       top: 30px;
       right: 30px;
-      width: 350px;
-      height: 350px;
+      width: 250px;
+      height: 250px;
     }
 
-    @include mobile {
+    @include mobile-portrait {
       top: 10px;
       right: 10px;
       width: 120px;
@@ -95,7 +103,12 @@ section {
   line-height: 1.8em;
   color: #{$text-color};
 
-  @include mobile {
+  @include tablet {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+
+  @include mobile-portrait {
     padding-top: 2em;
     padding-bottom: 2em;
   }
@@ -128,10 +141,15 @@ section {
 
     .headline {
       margin-bottom: 2.5em;
-      font-size: 3.3em;
+      font-size: 2.8em;
       font-weight: normal;
 
-      @include mobile {
+      @include tablet {
+        margin-bottom: 1.5em;
+        font-size: 3em;
+      }
+
+      @include mobile-portrait {
         margin-bottom: 0.5em;
         font-size: 3em;
       }
@@ -142,7 +160,7 @@ section {
       font-size: 2.7rem;
       font-weight: normal;
 
-      @include mobile {
+      @include mobile-portrait {
         margin-bottom: 0.3em;
         font-size: 2.4rem;
       }
@@ -160,7 +178,7 @@ section {
       background: url('../img/textbox-top.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile {
+      @include mobile-portrait {
         margin-bottom: 1em;
       }
     }
@@ -172,7 +190,7 @@ section {
       background: url('../img/textbox-middle.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile {
+      @include mobile-portrait {
         margin-top: 1em;
         margin-bottom: 1em;
       }
@@ -185,7 +203,7 @@ section {
       background: url('../img/textbox-bottom.png') no-repeat center center;
       background-size: cover;
 
-      @include mobile {
+      @include mobile-portrait {
         margin-top: 2em;
       }
     }
