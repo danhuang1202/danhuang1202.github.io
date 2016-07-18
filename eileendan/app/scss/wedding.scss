@@ -25,7 +25,7 @@ $desktop-width: 1024px;
 html {
   height: 100%;
   font-family: sans-serif, Arial, 微軟正黑體, Helvetica;
-  font-family: 'cwTeXFangSong', serif;
+  //font-family: 'cwTeXFangSong', serif;
   font-size: 16px;
 
   @include tablet {
@@ -50,7 +50,7 @@ section {
     }
 
     @include mobile {
-      height: 50%;
+      height: 60%;
     }
   }
 }
@@ -105,6 +105,7 @@ section {
 .section-information {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   padding-top: 3.12em;
   padding-bottom: 3.12em;
