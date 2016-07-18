@@ -136,6 +136,10 @@ section {
     line-height: 1.6em;
     color: #{$text-color};
     margin-bottom: 2.5em;
+
+    @include mobile {
+      font-size: 1.8em;
+    }
   }
 
   .button {
