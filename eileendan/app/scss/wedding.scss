@@ -144,11 +144,15 @@ section {
     background-color: #db524b;
     border: none;
     border-radius: 10px;
-    font-size: 1.5em;
+    font-size: 1.6em;
     letter-spacing: 2px;
     cursor: pointer;
     transition: box-shadow 0.2s linear,
                 opacity 0.2s linear;
+
+    @include mobile {
+      font-size: 1.8em;
+    }
 
     &:hover {
       box-shadow: 0 .2em .2em -.1em #c83166,0 .3em #a32252,0 .5em .5em -.1em rgba(0,0,0,0.12);
