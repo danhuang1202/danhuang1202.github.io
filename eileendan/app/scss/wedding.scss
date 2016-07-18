@@ -12,7 +12,7 @@ $desktop-width: 1024px;
 }
 
 @mixin tablet-landscape {
-  @media (max-device-width: #{$desktop-width - 1px}) and (orientation: landscape) {
+  @media (max-device-width: #{$desktop-width}) and (orientation: landscape) {
     @content;
   }
 }
@@ -237,6 +237,7 @@ section {
     &:hover {
       color: #db524b;
       border-color: #db524b;
+      transition: color 0.3s ease-out, border-color 0.3s ease-out;
     }
   }
 }
