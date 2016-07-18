@@ -12,7 +12,7 @@ $desktop-width: 1024px;
 }
 
 @mixin mobile-portrait {
-  @media (max-device-width: #{$mobile-width}) and (orientation: portrait) {
+  @media (max-device-width: #{$mobile-width}) {
     @content;
   }
 }
