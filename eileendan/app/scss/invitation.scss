@@ -1,0 +1,161 @@
+@import 'base';
+
+.cover {
+    position: relative;
+    background: url('../img/invitation_cover.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include mobile {
+      background-image: url('../img/invitation_cover_m.jpg');
+    }
+
+    .text-box {
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      text-align: center;
+
+      .title-box,
+      .info-box {
+        display: inline-block;
+      }
+
+      .title-box {
+        width: 40%;
+        @include mobile {
+          width: 50%;
+        }
+
+        .title-img {
+          width: 100%;
+          padding-bottom: 19%;
+          background-image: url('../img/invitation_title.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .info-box {
+        width: 60%;
+        @include mobile {
+          width: 70%;
+        }
+
+        .info-img {
+          width: 100%;
+          padding-bottom: 5.5%;
+          background-image: url('../img/invitation_info.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+}
+
+.info {
+  position: relative;
+  background-color: #{$background-color};
+  padding: 2em;
+
+  &.full-screen {
+    @include tablet {
+      height: auto;
+    }
+
+    @include mobile {
+      height: auto;
+    }
+  }
+
+  .info-box {
+    position: absolute;
+    width: 1024px;
+    height: 90%;
+    padding: 2em;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include tablet {
+      position: initial;
+      width: 100%;
+      transform: none;
+    }
+
+    @include mobile {
+      position: initial;
+      width: 100%;
+      transform: none;
+    }
+
+    &:after {
+      clear: both;
+    }
+
+    .detail,
+    .map {
+      width: 50%;
+      height: 100%;
+      float: left;
+
+      @include tablet {
+        width: 100%;
+        float: none;
+      }
+
+      @include mobile {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    .detail {
+      padding-right: 1em;
+
+      .title,
+      .text,
+      .sub-text {
+        display: block;
+      }
+
+      .title {
+        color: #{$title-color};
+        font-size: 1.4em;
+
+        @include mobile {
+          font-size: 2em;
+        }
+      }
+
+      .text {
+        color: #{$text-color};
+        font-size: 1.4em;
+        padding-left: 1em;
+        @include mobile {
+          font-size: 2em;
+        }
+      }
+
+      .sub-text {
+        color: #{$text-color};
+        padding-left: 1em;
+        font-size: 1.2em;
+        @include mobile {
+          font-size: 1.6em;
+        }
+      }
+
+      .block {
+        margin-bottom: 1em;
+      }
+
+      .sub-block {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .map {
+    }
+  }
+}
