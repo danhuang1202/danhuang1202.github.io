@@ -9,6 +9,13 @@
       background-image: url('../img/invitation_cover_m.jpg');
     }
 
+    &.full-screen {
+
+      @include mobile {
+        height: 70%;
+      }
+    }
+
     .text-box {
       position: absolute;
       bottom: 5%;
