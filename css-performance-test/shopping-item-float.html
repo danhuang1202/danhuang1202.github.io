@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            .item {
+                display: inline-block;
+                width: 100px;
+                height: 60px;
+                padding: 1px;
+                border: 1px solid black;
+            }
+            .tag-list {
+                text-align: center;
+                overflow: hidden;
+            }
+            .tag {
+                display: inline-block;
+                height: 100%;
+                width: 20px;
+                line-height: 58px;
+                box-sizing: border-box;
+                vertical-align: middle;
+                border: 1px solid black;
+            }
+            .tag-left {
+                float: left;
+            }
+            .tag-right {
+                float: right;
+            }
+            .tag-red {
+                border-color: red;
+            }
+            .tag-yellow {
+                border-color: yellow;
+            }
+            .tag-green {
+                border-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="result-list">
+            <div class="item">
+                <div class="tag-list">
+                    <span class="tag tag-left tag-red">1</span>
+                    <span class="tag tag-left tag-yellow">2</span>
+                    <span class="tag tag-right tag-green">3</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
